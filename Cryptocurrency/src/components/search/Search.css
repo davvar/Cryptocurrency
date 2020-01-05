@@ -1,0 +1,27 @@
+.Search {
+    display: flex;
+    border: 1px solid #1c334a;
+    background: #1c334a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 35%;
+}
+
+
+.Search img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.Search input {
+    background: none;
+    border: none;
+    color: #9cb3c9;
+    flex-basis: 90%;
+    outline: none;
+
+}
+.Search input::placeholder {
+    
+    color: #9cb3c9;
+}
