@@ -11,12 +11,12 @@ const BASE_URL = "https://api.udilia.com/coins/v1/cryptocurrencies";
 
 
 
-  const sorting = (data, sortBy, sortOrder) =>
-    data.sort((a, b) =>
-      sortOrder
-        ? +a[sortBy].replace(/[,.]/g, "") - +b[sortBy].replace(/[,.]/g, "")
-        : +b[sortBy].replace(/[,.]/g, "") - +a[sortBy].replace(/[,.]/g, "")
-    );
+const sorting = (data, sortBy, sortOrder) =>
+  data.sort((a, b) =>
+    sortOrder
+      ? +a[sortBy].replace(/[,.]/g, "") - +b[sortBy].replace(/[,.]/g, "")
+      : +b[sortBy].replace(/[,.]/g, "") - +a[sortBy].replace(/[,.]/g, "")
+  );
 
 
 
@@ -96,7 +96,7 @@ function App({ match, history }) {
       setSortOrder(prevOrder => !prevOrder);
     }
     setSortedBy(sortBy);
-    setCurrencies(sorting(currencies, sortBy,sortOrder));
+    setCurrencies(sorting(currencies, sortBy, sortOrder));
   };
 
   return (
